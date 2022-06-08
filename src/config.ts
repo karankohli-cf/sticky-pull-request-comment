@@ -36,7 +36,7 @@ function buildRepo(): {repo: string; owner: string} {
 function buildBody(): string {
   const path = core.getInput("path", {required: false})
   const collapsible_header = core.getInput("collapsible_header", {required: false})
-  var msg;
+  let msg;
   if (path) {
     try {
       msg=readFileSync(path, "utf-8")
