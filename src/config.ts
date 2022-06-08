@@ -23,7 +23,7 @@ export const hideClassify = core.getInput("hide_classify", {
 export const deleteOldComment = core.getBooleanInput("delete", {required: true})
 export const hideOldComment = core.getBooleanInput("hide", {required: true})
 export const githubToken = core.getInput("GITHUB_TOKEN", {required: true})
-export const collapsible_header = core.getInput("collapsible_header", {required: true})
+export const collapsible_header = core.getInput("collapsible_header", {required: false})
 
 export const body = buildBody()
 
