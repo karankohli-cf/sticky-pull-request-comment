@@ -189,6 +189,7 @@ describe("path", () => {
       pullRequestNumber: expect.any(Number),
       repo: {owner: "marocchino", repo: "stick-pull-request-comment"},
       body: "hi there\n",
+      collapsible_header: "heading",
       header: "",
       append: false,
       recreate: false,

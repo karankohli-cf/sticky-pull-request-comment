@@ -92,6 +92,15 @@ with:
   path: path-to-comment-contents.txt
 ```
 
+### Post comment in a collapsible menu
+
+```yaml
+uses: marocchino/sticky-pull-request-comment@v2
+with:
+  path: path-to-comment-contents.txt # will be posted in collapsible menu
+  collapsible_header: "This is a heading"
+```
+
 ### Delete the previous comment and add a comment at the end
 
 ```yaml
@@ -178,6 +187,10 @@ is explicitly passed, this problem can be solved by just removing it.
 ### `path`
 
 **Optional** Path to file containing comment message
+
+### `collapsible_header`
+
+**Optional** Set heading for a collapsible heading with comment
 
 ### `number`
 

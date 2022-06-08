@@ -12,7 +12,8 @@ import {
   hideOldComment,
   pullRequestNumber,
   recreate,
-  repo
+  repo,
+  collapsible_header
 } from "./config"
 import {
   createComment,
