@@ -50,7 +50,7 @@ function buildBody(): string {
     msg=core.getInput("message", {required: false})
   }
   if(collapsible_header){
-    let content;
+    const
     content = `
     <details>
     <summary>${collapsible_header}</summary>
