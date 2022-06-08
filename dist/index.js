@@ -229,7 +229,9 @@ function buildRepo() {
 }
 function buildBody() {
     const path = core.getInput("path", { required: false });
-    const collapsible_header = core.getInput("collapsible_header", { required: false });
+    const collapsible_header = core.getInput("collapsible_header", {
+        required: false
+    });
     let msg;
     if (path) {
         try {
@@ -246,12 +248,7 @@ function buildBody() {
         msg = core.getInput("message", { required: false });
     }
     if (collapsible_header) {
-        const content = `
-    <details>
-    <summary>${collapsible_header}</summary>
-      ${msg}
-    </details>
-    `;
+        const content = `<details><summary>${collapsible_header}</summary>${msg}</details>`;
         msg = content;
     }
     return msg;
