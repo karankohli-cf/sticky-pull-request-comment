@@ -13,7 +13,6 @@ import {
   pullRequestNumber,
   recreate,
   repo,
-  collapsible_header
 } from "./config"
 import {
   createComment,
