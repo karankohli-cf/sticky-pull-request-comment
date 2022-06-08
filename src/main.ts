@@ -12,7 +12,7 @@ import {
   hideOldComment,
   pullRequestNumber,
   recreate,
-  repo,
+  repo
 } from "./config"
 import {
   createComment,

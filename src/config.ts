@@ -35,11 +35,13 @@ function buildRepo(): {repo: string; owner: string} {
 
 function buildBody(): string {
   const path = core.getInput("path", {required: false})
-  const collapsible_header = core.getInput("collapsible_header", {required: false})
-  let msg;
+  const collapsible_header = core.getInput("collapsible_header", {
+    required: false
+  })
+  let msg
   if (path) {
     try {
-      msg=readFileSync(path, "utf-8")
+      msg = readFileSync(path, "utf-8")
     } catch (error) {
       if (error instanceof Error) {
         core.setFailed(error.message)
@@ -47,17 +49,16 @@ function buildBody(): string {
       return ""
     }
   } else {
-    msg=core.getInput("message", {required: false})
+    msg = core.getInput("message", {required: false})
   }
-  if(collapsible_header){
-    const
-    content = `
+  if (collapsible_header) {
+    const content = `
     <details>
     <summary>${collapsible_header}</summary>
       ${msg}
     </details>
-    `;
-    msg=content;
+    `
+    msg = content
   }
-  return msg;
+  return msg
 }
